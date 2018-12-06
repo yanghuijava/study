@@ -1,0 +1,1 @@
+com.yanghui.clplug.api.IUserService=com.yanghui.clmodel1.impl.UserServiceImpl
