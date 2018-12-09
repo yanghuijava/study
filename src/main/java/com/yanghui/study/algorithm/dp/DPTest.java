@@ -25,22 +25,21 @@ class ItemCount{
 public class DPTest {
 
 	public static void main(String[] args) {
-//		int cap = 6;
-//		Item[] items = new Item[] {
-//				new Item("吉他",2, 4),
-//				new Item("iphone",4, 5), 
-//				new Item("笔记本", 1, 19),
-//				new Item("音响", 5, 3),
-//				new Item("ipad", 2, 2),
-//				new Item("ipone", 3, 30)};
-//		ItemCount ic = beibao1(items, cap);
-//		String result = "";
-//		for(String s : ic.getItems().split("-->")) {
-//			result = result + items[Integer.valueOf(s)].getName() + ":" + items[Integer.valueOf(s)].getWeight() +  ",";
-//		}
-//		result = result.substring(0, result.length()-1);
-//		System.out.println("背包容量为" + cap + "英镑可以放入物品：" + 
-//				result + "达到最大价值：" + ic.getTotal() + "美元");
+		int cap = 5;
+		Item[] items = new Item[] {
+//				new Item("吉他",4, 5),
+				new Item("iphone",1, 2), 
+				new Item("笔记本", 2, 4),
+				new Item("音响", 3, 4),
+				new Item("ipad", 4, 5)};
+		ItemCount ic = beibao1(items, cap);
+		String result = "";
+		for(String s : ic.getItems().split("-->")) {
+			result = result + items[Integer.valueOf(s)].getName() + ":" + items[Integer.valueOf(s)].getWeight() +  ",";
+		}
+		result = result.substring(0, result.length()-1);
+		System.out.println("背包容量为" + cap + "英镑可以放入物品：" + 
+				result + "达到最大价值：" + ic.getTotal() + "美元");
 //		int[] arr = new int[] {2,4,5,1,8};
 //		System.out.println(equalTarget(arr, 0));
 //		System.out.println(equalTarget(arr, arr.length-1,0));
@@ -49,17 +48,17 @@ public class DPTest {
 //		int[] p = new int[] {1,5,8,9,10};
 //		System.out.println(cuttingSteel(p));
 		
-		Item[] huowei = new Item[] {
-				new Item("0号货位",1, 1),
-				new Item("1号货位",3, 3),
-				new Item("2号货位",8, 8),
-				new Item("3号货位", 10, 10),
-				new Item("4号货位", 12, 12),
-				new Item("5号货位", 15, 15)};
-		ItemCount ic1 = beibao1(huowei, 8);
-		System.out.println(ic1);
-		ItemCount ic2 = beibao1(huowei,10);
-		System.out.println(ic2);
+//		Item[] huowei = new Item[] {
+//				new Item("0号货位",1, 1),
+//				new Item("1号货位",3, 3),
+//				new Item("2号货位",8, 8),
+//				new Item("3号货位", 10, 10),
+//				new Item("4号货位", 12, 12),
+//				new Item("5号货位", 15, 15)};
+//		ItemCount ic1 = beibao1(huowei, 8);
+//		System.out.println(ic1);
+//		ItemCount ic2 = beibao1(huowei,10);
+//		System.out.println(ic2);
 	}
 	
 	
