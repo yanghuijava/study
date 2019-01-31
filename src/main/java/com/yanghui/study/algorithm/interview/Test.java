@@ -1,49 +1,20 @@
 package com.yanghui.study.algorithm.interview;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class Test {
 
 	public static void main(String[] args) {
-		int arr[] = new int[] {2,1,3,6,1,2,4,6,8,9,7,0,-1};
-		fastSort(arr);
-		System.out.println(Arrays.toString(arr));
+		int[] arr1 = new int[] {1,2,3,4,5,6};
+		int[] arr2 = new int[] {2,3,4,5};
 	}
 	
-	public static void fastSort(int[] arr) {
-		if(arr == null || arr.length == 0) {
-			return;
+	public static void zws(int[] a,int[] b) {
+		int p = a.length + b.length;
+		if(p % 2 == 0) {
+			  
 		}
-		fastSort(arr, 0, arr.length - 1);
-	}
-	
-	
-	public static void fastSort(int[] arr,int start,int end) {
-		if(start >= end) {
-			return;
-		}
-		int p = partation(arr,start,end);
-		fastSort(arr, start, p - 1);
-		fastSort(arr, p + 1, end);
-	}
-
-
-	private static int partation(int[] arr, int start, int end) {
-		int p = arr[start];
-		int i = start + 1;
-		for(int j=i;j<=end;j++) {
-			if(arr[j] < p) {
-				if(i != j) {
-					int temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
-				}
-				i ++;
-			}
-		}
-		int temp = arr[start];
-		arr[start] = arr[i-1];
-		arr[i-1] = temp;
-		return i-1;
 	}
 }
